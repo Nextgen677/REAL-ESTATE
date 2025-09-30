@@ -1,4 +1,4 @@
-/* ✅ Base Reset and Typography */
+/* ✅ Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +8,12 @@
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #ffffff;
-  color: #333333;
+  color: #333;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
-/* ✅ Container */
+/* ✅ Container Utility */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -22,13 +23,12 @@ body {
 
 /* ✅ Navigation Bar */
 nav {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
-  animation: fadeInNav 0.6s ease forwards;
 }
 
 nav ul {
@@ -42,15 +42,14 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: #333333;
+  color: #333;
   font-weight: 500;
   font-size: 1rem;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
   color: #007BFF;
-  transform: scale(1.05);
 }
 
 /* ✅ Hero Banner */
@@ -65,28 +64,30 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: fadeInHero 1s ease forwards;
 }
 
-#hero .hero-text {
+.hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  background: rgba(0,0,0,0.4);
+  color: #fff;
+  background: rgba(0,0,0,0.5);
   padding: 20px 40px;
   border-radius: 8px;
+  text-align: center;
 }
 
 /* ✅ About Section */
+#about {
+  background-color: #f9f9f9;
+}
+
 .about-container {
   display: flex;
-  align-items: center;
-  gap: 40px;
   flex-wrap: wrap;
-  animation: fadeInUp 0.8s ease forwards;
+  gap: 40px;
+  align-items: center;
 }
 
 .about-photo img {
@@ -106,10 +107,14 @@ nav ul li a:hover {
 
 .about-text p {
   font-size: 1rem;
-  color: #555555;
+  color: #555;
 }
 
 /* ✅ Projects Section */
+#projects {
+  background-color: #fff;
+}
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -121,7 +126,6 @@ nav ul li a:hover {
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease;
-  animation: fadeInUp 0.8s ease forwards;
 }
 
 .project-card img {
@@ -138,11 +142,14 @@ nav ul li a:hover {
   transform: scale(1.02);
 }
 
-/* ✅ Contact Form */
+/* ✅ Contact Section */
+#contact {
+  background-color: #f9f9f9;
+}
+
 .contact-form {
   max-width: 600px;
   margin: auto;
-  animation: fadeInUp 0.8s ease forwards;
 }
 
 .contact-form input,
@@ -157,7 +164,7 @@ nav ul li a:hover {
 
 .contact-form button {
   background-color: #007BFF;
-  color: white;
+  color: #fff;
   padding: 12px 20px;
   border: none;
   border-radius: 6px;
@@ -171,11 +178,11 @@ nav ul li a:hover {
 
 /* ✅ Footer */
 footer {
-  background-color: #f8f8f8;
+  background-color: #f0f0f0;
   text-align: center;
   padding: 30px 0;
   font-size: 0.9rem;
-  color: #666666;
+  color: #666;
 }
 
 /* ✅ Responsive Layout */
@@ -190,42 +197,8 @@ footer {
     text-align: center;
   }
 
-  #hero .hero-text {
+  .hero-text {
     padding: 15px 20px;
     font-size: 1rem;
-  }
-}
-
-/* ✅ Minimal Animations */
-@keyframes fadeInNav {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInHero {
-  from {
-    opacity: 0;
-    transform: scale(1.05);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
