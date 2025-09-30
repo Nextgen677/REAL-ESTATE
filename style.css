@@ -1,0 +1,55 @@
+/* ✅ Navigation Bar Styling */
+nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  animation: fadeInNav 0.8s ease forwards;
+}
+
+/* ✅ Nav List Layout */
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 20px 0;
+  gap: 30px;
+}
+
+/* ✅ Nav Links */
+nav ul li a {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* ✅ Hover Effects */
+nav ul li a:hover {
+  color: #007BFF;
+  transform: scale(1.05);
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* ✅ Fade-In Animation */
+@keyframes fadeInNav {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
